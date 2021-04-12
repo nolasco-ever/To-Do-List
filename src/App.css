@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background: #f8f8ff;
+    color: white;
+    font-family: "Arial", sans-serif;
+    min-height: 100vh;
+  }
+
+  header {
+    font-size: 1rem;
+    background: #434343;
+  }
+  
+  header,
+  form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  form{
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.25));
+  }
+
+  form input,
+  form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+  }
+  form input{
+    width: 75vw;
+    border-radius: 5px 0 0 5px;
+  }
+  form button{
+    border-radius: 0 5px 5px 0;
+  }
+  form button {
+    color: #dd1818;
+    background: #f7fffe;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  form button:hover {
+    background: #dd1818;
+    color: white;
+  }
+  .todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .todo-list {
+    min-width: 30%;
+    list-style: none;
+  }
+  
+  .todo {
+    margin-bottom: 1rem;
+    background: white;
+    font-size: 1.5rem;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s ease;
+
+    border-radius: 5px;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.25));
+  }
+  .todo li {
+    flex: 1;
+  }
+  
+  .trash-btn,
+  .complete-btn {
+    background: #dd1818;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  .trash-btn{
+    border-radius: 0 5px 5px 0;
+  }
+  .complete-btn {
+    background: rgb(11, 212, 162);
+  }
+  .todo-item {
+    padding: 0rem 0.5rem;
+  }
+  
+  .fa-trash,
+  .fa-check {
+    pointer-events: none;
+  }
+  
+  .fall {
+    transform: translateY(10rem) rotateZ(20deg);
+    opacity: 0;
+  }
+  
+  .completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+  
+  /*CUSTOM SELECTOR */
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background-image: none;
+  }
+  
+  /* Custom Select */
+  .select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  select {
+    color: #dd1818;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    width: 12rem;
+  }
+  /* Arrow */
+  .select::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    background: #dd1818;
+    cursor: pointer;
+    pointer-events: none;
+  }
+
+  @media screen and (min-width: 1000px){
+    .App{
+      display: flex;
+      flex-direction: row;
+    }
+
+    header {
+      flex: 1;
+      filter: drop-shadow(-15px 0 20px rgb(0, 0, 0));
+      height: 100vh;
+      box-sizing: border-box;
+      padding: 10px;
+    }
+  
+    .listBody{
+      height: 100vh;
+      flex: 2;
+      overflow-x: auto;
+    }
+
+    form input{
+      width: 30vw;
+    }
+  }
+  
